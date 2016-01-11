@@ -1,0 +1,43 @@
+{:hook('body_start')}
+<div class="pHeader">
+    <div class="wrap clearfix">
+        <div class="logo"><a href="./index_files/index.html">坤凡教育</a></div>
+
+        <div class="tSearch">
+
+        </div>
+
+        <div class="tel">
+            　课程咨询：<span>010-56639999</span>   (8:00-21:00) <br>
+            一对一课程：<span>010-56639988</span>   (9:00-20:00)
+        </div>
+    </div>
+</div>
+
+<div class="header">
+    <php>
+        $effected_id="menu-header";
+        $filetpl="<a href='\$href' target='\$target'>\$label</a>";
+        $foldertpl="<a class='dropdown-toggle' href='\$href' target='\$target'>\$label</a>";
+
+
+        $showlevel=6;/*显示的层级*/
+        $dropdown='dropdown';/*含有子目录的li标签的class属性值*/
+    </php>
+
+
+    <!-- sline end -->
+    <div class="navigationBar">
+        <div class="navigationBarInnel">
+            <tt title="所有产品分类"></tt>
+            <div class="mainMenuV">
+                {:sp_get_menus("main",$effected_id,$filetpl,$showlevel)}
+
+            </div>
+            <!-- mainMenuV end -->
+        </div>
+        <!-- mainMenudl end -->
+    </div>
+    <!-- navigationBar end -->
+</div>
+<!-- header end -->
